@@ -37,9 +37,17 @@ namespace WebService_SP.Controllers
         {
         }
 
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        public DataSet VDSaldo(int id_cartao, int id_onibus, [FromBody]string value)
         {
+
+
+            DataSet VDSaldo = dblayer.VDSaldo(id_cartao, id_onibus);
+            return VDSaldo;
+        }
+            // PUT api/values/5
+            public void Put(int id,[FromBody]string value)
+        {
+          
         }
 
         // DELETE api/values/5
